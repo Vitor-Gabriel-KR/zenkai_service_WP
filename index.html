@@ -364,82 +364,193 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+     <section id="portfolio" class="portfolio section">
         <div class="container">
-            <h2 class="section__title">Projetos em Destaque</h2>
+            <div class="portfolio__header">
+                <h2 class="section__title">Projetos em Destaque</h2>
+                <p class="portfolio__subtitle">Soluções tecnológicas inovadoras desenvolvidas com stack moderno e arquitetura escalável</p>
+            </div>
+            
             <div class="portfolio__grid">
-                <div class="portfolio__item">
-                    <div class="portfolio__image">
-                        <div class="project__image">SDSync</div>
+                <article class="portfolio__card">
+                    <div class="card__header">
+                        <div class="project__badge">SaaS Enterprise</div>
+                        <div class="project__image">
+                            <div class="image__placeholder">
+                                <div class="project-logo">SDSync</div>
+                                <div class="project-subtitle">SCADA Platform</div>
+                            </div>
+                            <div class="image__overlay">
+                                <div class="overlay__content">
+                                    <span class="view-project">Acessar Plataforma</span>
+                                    <div class="overlay-arrow">→</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolio__content">
-                        <h3 class="portfolio__title">SDSync - SCADA SaaS</h3>
-                        <p class="portfolio__description">
-                            Sistema SCADA web em modelo SaaS desenvolvido do zero para monitoramento 
-                            de usinas fotovoltaicas em tempo real. Arquitetura de microserviços com 
-                            backend Python e frontend Vue.js.
+                    
+                    <div class="card__body">
+                        <div class="project__meta">
+                            <span class="project__year">2024</span>
+                            <span class="project__category">Sistema de Monitoramento</span>
+                        </div>
+                        
+                        <h3 class="project__title">SDSync - Plataforma SCADA Cloud</h3>
+                        
+                        <p class="project__description">
+                            Plataforma SaaS completa para monitoramento em tempo real de usinas fotovoltaicas. 
+                            Desenvolvida com arquitetura de microserviços, proporciona insights preditivos, 
+                            relatórios automáticos e controle remoto de ativos energéticos.
                         </p>
-                        <div class="portfolio__tags">
-                            <span class="portfolio__tag">SaaS</span>
-                            <span class="portfolio__tag">SCADA</span>
-                            <span class="portfolio__tag">Python</span>
-                            <span class="portfolio__tag">Vue.js</span>
-                            <span class="portfolio__tag">Microserviços</span>
+                        
+                        <div class="project__highlights">
+                            <div class="highlight">
+                                <span class="highlight__icon">⚡</span>
+                                <span class="highlight__text">Monitoramento em tempo real</span>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight__icon">🗒️</span>
+                                <span class="highlight__text">Relatórios Rotineiros</span>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight__icon">📊</span>
+                                <span class="highlight__text">Analytics preditivo</span>
+                            </div>
                         </div>
-                        <div class="portfolio__links">
-                            <a href="#" class="portfolio__link">Ver Detalhes</a>
+                        
+                        <div class="project__stats">
+                            <div class="stat">
+                                <span class="stat__number">100%</span>
+                                <span class="stat__label">Uptime</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">20+</span>
+                                <span class="stat__label">Clientes</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">50ms</span>
+                                <span class="stat__label">Latência</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <div class="card__footer">
+                        <div class="tech__stack">
+                            <span class="tech__tag">Python</span>
+                            <span class="tech__tag">Angular</span>
+                            <span class="tech__tag">Docker</span>
+                            <span class="tech__tag">CloudFlare</span>
+                            <span class="tech__tag">PostgreSQL</span>
+                        </div>
+                        
+                        <div class="project__actions">
+                            <a href="https://www.sdsync.com.br" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                                <span>Ver Plataforma</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
                 
-                <div class="portfolio__item">
-                    <div class="portfolio__image">
-                        <div class="project__image">CertClient</div>
+                <article class="portfolio__card">
+                    <div class="card__header">
+                        <div class="project__badge">Open Source</div>
+                        <div class="project__image">
+                            <div class="image__placeholder">
+                                <div class="project-logo">CertClient</div>
+                                <div class="project-subtitle">Convertion Tool</div>
+                            </div>
+                            <div class="image__overlay">
+                                <div class="overlay__content">
+                                    <span class="view-project">Ver Código</span>
+                                    <div class="overlay-arrow">→</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolio__content">
-                        <h3 class="portfolio__title">CertClient</h3>
-                        <p class="portfolio__description">
-                            Conversor de certificados digitais (.PFX para .CRT + .KEY) desenvolvido 
-                            em parceria com a TecnoSpeed. Interface Electron com validação de segurança.
+                    
+                    <div class="card__body">
+                        <div class="project__meta">
+                            <span class="project__year">2023</span>
+                            <span class="project__category">Ferramenta de Segurança</span>
+                        </div>
+                        
+                        <h3 class="project__title">CertClient - Conversor de Certificados</h3>
+                        
+                        <p class="project__description">
+                            Solução desktop para conversão segura de certificados digitais, desenvolvida em 
+                            parceria com a TecnoSpeed. Interface intuitiva com validação criptográfica e 
+                            suporte multi-plataforma para ambientes corporativos.
                         </p>
-                        <div class="portfolio__tags">
-                            <span class="portfolio__tag">Electron</span>
-                            <span class="portfolio__tag">Node.js</span>
-                            <span class="portfolio__tag">Segurança</span>
-                            <span class="portfolio__tag">Desktop</span>
+                        
+                        <div class="project__highlights">
+                            <div class="highlight">
+                                <span class="highlight__icon">🛡️</span>
+                                <span class="highlight__text">Validação criptográfica</span>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight__icon">🔧</span>
+                                <span class="highlight__text">Multi-plataforma</span>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight__icon">⚡</span>
+                                <span class="highlight__text">Processo rápido</span>
+                            </div>
                         </div>
-                        <div class="portfolio__links">
-                            <a href="#" class="portfolio__link">Ver Detalhes</a>
+                        
+                        <div class="project__stats">
+                            <div class="stat">
+                                <span class="stat__number">2min</span>
+                                <span class="stat__label">Conversão</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">100%</span>
+                                <span class="stat__label">Seguro</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">v2.1</span>
+                                <span class="stat__label">Release</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <div class="card__footer">
+                        <div class="tech__stack">
+                            <span class="tech__tag">Electron</span>
+                            <span class="tech__tag">Node.js</span>
+                            <span class="tech__tag">Cryptography</span>
+                            <span class="tech__tag">Windows</span>
+                            <span class="tech__tag">Linux</span>
+                            <span class="tech__tag">OpenSSL</span>
+                        </div>
+                        
+                        <div class="project__actions">
+                            <a href="https://github.com/dev-ana-lopes/Cert-Client" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                                <span>Ver Código</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
                 
-                <div class="portfolio__item">
-                    <div class="portfolio__image">
-                        <div class="project__image">ClinicaMVP</div>
-                    </div>
-                    <div class="portfolio__content">
-                        <h3 class="portfolio__title">ClinicaMVP</h3>
-                        <p class="portfolio__description">
-                            Sistema completo de gerenciamento para clínicas médicas. Desenvolvido com 
-                            Java Spring Boot no backend e Vue.js no frontend. Inclui agendamento, 
-                            prontuários e faturamento.
-                        </p>
-                        <div class="portfolio__tags">
-                            <span class="portfolio__tag">Spring Boot</span>
-                            <span class="portfolio__tag">Vue.js</span>
-                            <span class="portfolio__tag">PostgreSQL</span>
-                            <span class="portfolio__tag">MVP</span>
-                        </div>
-                        <div class="portfolio__links">
-                            <a href="#" class="portfolio__link">Ver Detalhes</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+
+            <div class="portfolio__cta">
+                <p>Tem um projeto em mente? Vamos transformar sua ideia em realidade!</p>
+                <a href="#contact" class="btn btn--primary btn--large">
+                    <span>Iniciar Projeto</span>
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="currentColor"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
-
+    
     <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
