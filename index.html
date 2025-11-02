@@ -554,71 +554,143 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
-            <h2 class="section__title">Vamos Trabalhar Juntos?</h2>
+            <div class="contact__header">
+                <h2 class="section__title">Vamos Trabalhar Juntos?</h2>
+                <p class="contact__subtitle">Pronto para transformar sua ideia em realidade? Vamos conversar sobre seu projeto.</p>
+            </div>
+            
             <div class="contact__content">
                 <div class="contact__info">
-                    <h3>Entre em Contato</h3>
-                    <p>Pronto para transformar sua ideia em realidade? Vamos conversar sobre seu projeto.</p>
-                    
-                    <div class="contact__methods">
-                        <div class="contact__method">
-                            <strong>Email:</strong>
-                            <a href="mailto:krosharesheniye@gmail.com">krosharesheniye@gmail.com</a>
+                    <div class="contact__card">
+                        <div class="contact__card-header">
+                            <div class="contact__icon">💬</div>
+                            <h3>Vamos Conversar</h3>
                         </div>
+                        <p>Estou disponível para novos projetos e parcerias. Respondo em até 48h.</p>
                         
-                        <div class="contact__method">
-                            <strong>WhatsApp:</strong>
-                            <a href="https://wa.me/5544988110181" target="_blank">+55 (44) 98811-0181</a>
-                        </div>
-                        
-                        <div class="contact__method">
-                            <strong>CNPJ:</strong>
-                            <span>62.152.425/0001-73</span>
-                        </div>
+                        <div class="contact__methods">
+                            <div class="contact__method">
+                                <div class="method__icon">📧</div>
+                                <div class="method__info">
+                                    <span class="method__label">Email</span>
+                                    <a href="mailto:krosharesheniye@gmail.com" class="method__value">krosharesheniye@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact__method">
+                                <div class="method__icon">📱</div>
+                                <div class="method__info">
+                                    <span class="method__label">WhatsApp</span>
+                                    <a href="https://wa.me/5544988110181" target="_blank" class="method__value">+55 (44) 98811-0181</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact__method">
+                                <div class="method__icon">🏢</div>
+                                <div class="method__info">
+                                    <span class="method__label">CNPJ</span>
+                                    <span class="method__value">62.152.425/0001-73</span>
+                                </div>
+                            </div>
 
-                        <div class="contact__method">
-                            <strong>Localização:</strong>
-                            <span>Maringá - PR | Remoto</span>
+                            <div class="contact__method">
+                                <div class="method__icon">📍</div>
+                                <div class="method__info">
+                                    <span class="method__label">Localização</span>
+                                    <span class="method__value">Maringá - PR | Remoto</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="social__links">
-                        <a href="https://github.com/Vitor-Gabriel-KR" target="_blank" class="social__link">
-                            GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/in/vitor-gabriel-49a500269/" target="_blank" class="social__link">
-                            LinkedIn
-                        </a>
+                    <div class="social__section">
+                        <h4>Conecte-se Comigo</h4>
+                        <div class="social__links">
+                            <a href="https://github.com/Vitor-Gabriel-KR" target="_blank" class="social__link">
+                                <span class="social__icon">🐙</span>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/vitor-gabriel-49a500269/" target="_blank" class="social__link">
+                                <span class="social__icon">💼</span>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact__features">
+                        <div class="feature">
+                            <div class="feature__icon">⚡</div>
+                            <div class="feature__text">
+                                <strong>Resposta Rápida</strong>
+                                <span>Retorno em até 48h</span>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature__icon">🎯</div>
+                            <div class="feature__text">
+                                <strong>Orçamento Preciso</strong>
+                                <span>Sem surpresas no valor</span>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature__icon">🛡️</div>
+                            <div class="feature__text">
+                                <strong>Contrato Formal</strong>
+                                <span>Segurança para ambos</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <form class="contact__form" id="contactForm">
-                    <div class="form__group">
-                        <input type="text" name="name" placeholder="Seu nome completo" required>
-                    </div>
-                    
-                    <div class="form__group">
-                        <input type="email" name="email" placeholder="Seu melhor email" required>
-                    </div>
-                    
-                    <div class="form__group">
-                        <select name="service" required>
-                            <option value="">Tipo de serviço</option>
-                            <option value="fullstack">Desenvolvimento FullStack</option>
-                            <option value="scada">Sistemas SCADA</option>
-                            <option value="arquitetura">Arquitetura & Planejamento</option>
-                            <option value="devops">DevOps & Infraestrutura</option>
-                            <option value="consultoria">Consultoria</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form__group">
-                        <textarea name="message" placeholder="Descreva seu projeto ou necessidade..." rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn--primary">Solicitar Proposta</button>
-                </form>
+                <div class="contact__form-container">
+                    <form class="contact__form" id="contactForm">
+                        <div class="form__header">
+                            <h3>Solicite uma Proposta</h3>
+                            <p>Preencha os dados abaixo e entrarei em contato</p>
+                        </div>
+                        
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="name">Nome completo *</label>
+                                <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="service">Tipo de serviço *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecione o serviço</option>
+                                <option value="fullstack">Desenvolvimento FullStack</option>
+                                <option value="scada">Sistemas SCADA</option>
+                                <option value="arquitetura">Arquitetura & Planejamento</option>
+                                <option value="devops">DevOps & Infraestrutura</option>
+                                <option value="consultoria">Consultoria</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message">Descreva seu projeto *</label>
+                            <textarea id="message" name="message" placeholder="Descreva brevemente seu projeto, objetivos, prazos e orçamento..." rows="5" required></textarea>
+                            <div class="char-count">0/500</div>
+                        </div>
+                        
+                        <div class="form__footer">
+                            <button type="submit" class="btn btn--primary btn--full">
+                                <span>Enviar Solicitação</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                            <p class="form__note">* Campos obrigatórios. Seus dados estão seguros conosco.</p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -627,22 +699,64 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
-                <div class="footer__brand">
-                    <h3>Vitor Gabriel</h3>
-                    <p>Desenvolvedor FullStack FullCycle</p>
-                    <p>Zenkai - 62.152.425/0001-73</p>
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <div class="footer__logo">
+                            <div class="logo">ZENKAI</div>
+                        </div>
+                        <div class="footer__info">
+                            <h3>Vitor Gabriel</h3>
+                            <p>Desenvolvedor FullStack FullCycle</p>
+                            <span>62.152.425/0001-73</span>
+                        </div>
+                    </div>
+                    
+                    <div class="footer__links">
+                        <div class="footer__column">
+                            <h4>Navegação</h4>
+                            <a href="#home">Home</a>
+                            <a href="#about">Sobre</a>
+                            <a href="#services">Serviços</a>
+                            <a href="#portfolio">Portfólio</a>
+                            <a href="#contact">Contato</a>
+                        </div>
+                        
+                        <div class="footer__column">
+                            <h4>Serviços</h4>
+                            <a href="#services">Desenvolvimento FullStack</a>
+                            <a href="#services">Sistemas SCADA</a>
+                            <a href="#services">Arquitetura de Software</a>
+                            <a href="#services">Consultoria</a>
+                        </div>
+                        
+                        <div class="footer__column">
+                            <h4>Contato</h4>
+                            <a href="mailto:krosharesheniye@gmail.com">krosharesheniye@gmail.com</a>
+                            <a href="https://wa.me/5544988110181" target="_blank">+55 (44) 98811-0181</a>
+                            <span>Maringá - PR</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="footer__links">
-                    <a href="#home">Home</a>
-                    <a href="#about">Sobre</a>
-                    <a href="#services">Serviços</a>
-                    <a href="#portfolio">Portfólio</a>
-                    <a href="#contact">Contato</a>
-                </div>
-                
-                <div class="footer__copy">
-                    <p>&copy; 2024 Zenkai - Vitor Gabriel. Todos os direitos reservados.</p>
+                <div class="footer__bottom">
+                    <div class="footer__social">
+                        <a href="https://github.com/Vitor-Gabriel-KR" target="_blank" class="social__link">
+                            <span class="social__icon">🐙</span>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/vitor-gabriel-49a500269/" target="_blank" class="social__link">
+                            <span class="social__icon">💼</span>
+                            LinkedIn
+                        </a>
+                    </div>
+                    
+                    <div class="footer__copy">
+                        <p>&copy; 2024 Zenkai - Vitor Gabriel. Todos os direitos reservados.</p>
+                        <div class="footer__legal">
+                            <a href="#privacy">Política de Privacidade</a>
+                            <a href="#terms">Termos de Uso</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
