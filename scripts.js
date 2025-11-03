@@ -38,3 +38,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+emailjs.init('service_38lfzb8'); 
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    emailjs.sendForm('service_38lfzb8', 'template_0f85smk', this)
+        .then(function() {
+            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+            document.getElementById('contactForm').reset();
+        }, function(error) {
+            alert('Falha ao enviar mensagem. Tente novamente ou entre em contato diretamente por email.');
+            console.log('FAILED...', error);
+        });
+});
+
+document.getElementById('message').addEventListener('input', function() {
+    const charCount = this.value.length;
+    document.querySelector('.char-count').textContent = `${charCount}/500`;
+});
