@@ -61,46 +61,110 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section (Sobre Nós & Corpo Técnico) -->
     <section id="about" class="about section">
         <div class="container">
-            <h2 class="section__title">Sobre Mim</h2>
+            <h2 class="section__title">Sobre Nós</h2>
             <div class="about__content">
-                <div class="about__text">
+                
+                <!-- Lado Esquerdo: Texto Institucional da Empresa -->
+                <div class="about__info-company">
                     <p class="about__intro">
-                        Desenvolvedor FullStack FullCycle especializado em Python, DevOps e arquitetura de software. 
-                        Atuo no desenvolvimento completo de sistemas de monitoramento para o setor de energia renovável, 
-                        criando soluções escaláveis e eficientes desde o planejamento até a implementação.
+                        A <strong>Zenkai</strong> é uma consultoria boutique de engenharia de software especializada em arquiteturas de alta disponibilidade, resiliência e continuidade de negócios. Atuamos sob a filosofia <em>Full-Cycle</em>, garantindo que aplicações de missão crítica operem sem gargalos desde o desenho arquitetural até o deploy automatizado e sustentação em nuvem.
                     </p>
-                    
+                    <p class="about__intro">
+                        Nascida da necessidade do mercado B2B por segurança técnica estrutural, projetamos e auditamos sistemas modulares complexos, telemetria em tempo real e ecossistemas digitais robustos, traduzindo requisitos críticos de negócio em engenharia confiável de alta performance.
+                    </p>
+
+                    <!-- Áreas de Atuação Institucionais -->
                     <div class="expertise__highlight">
-                        <h3>Áreas de Especialização</h3>
+                        <h3>Diretrizes Operacionais</h3>
                         <div class="highlights-grid">
                             <div class="highlight-item">
-                                <div class="highlight-icon">⚡</div>
+                                <span class="highlight-icon">🏗️</span>
                                 <div class="highlight-text">
-                                    <strong>Desenvolvimento FullCycle</strong>
-                                    <span>Desenvolvimento completo do conceito à produção</span>
+                                    <strong>Engenharia Full-Cycle</strong>
+                                    <span>Domínio completo do ciclo de vida do software, do design à resiliência em produção.</span>
                                 </div>
                             </div>
                             <div class="highlight-item">
-                                <div class="highlight-icon">🔧</div>
+                                <span class="highlight-icon">⚡</span>
                                 <div class="highlight-text">
-                                    <strong>DevOps & QA</strong>
-                                    <span>CI/CD, testes automatizados e infraestrutura</span>
+                                    <strong>Alta Disponibilidade (HA)</strong>
+                                    <span>Mitigação de riscos, tolerância a falhas e arquiteturas distribuídas prontas para picos de carga.</span>
                                 </div>
                             </div>
                             <div class="highlight-item">
-                                <div class="highlight-icon">🏗️</div>
+                                <span class="highlight-icon">🔧</span>
                                 <div class="highlight-text">
-                                    <strong>Software Design & Architecture</strong>
-                                    <span>Arquitetura de sistemas escaláveis e planejamento estratégico de software</span>
+                                    <strong>DevOps & Automação</strong>
+                                    <span>Infraestrutura programável, esteiras CI/CD eficientes e observabilidade contínua.</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="skills">
+                <!-- Lado Direito: Aba de Funcionários / Corpo Técnico -->
+                <div class="about__team-section">
+                    <h3>Corpo Técnico</h3>
+                    <p class="team-subtitle">Clique no especialista para visualizar as credenciais técnicas detalhadas.</p>
+                    
+                    <div class="team-grid">
+                        <!-- Card do Funcionário (Abre o Pop-up) -->
+                        <div class="profile__card" id="open-profile-modal">
+                            <div class="profile__image">
+                                <img src="Assets/profile pic.jpeg" alt="Vitor Gabriel - Tech Lead" class="profile-photo">
+                            </div>
+                            <div class="profile__info">
+                                <h4>Vitor Gabriel</h4>
+                                <p>Tech Lead & Fundador</p>
+                                <div class="profile__stats">
+                                    <div class="stat">
+                                        <strong>3+</strong>
+                                        <span>Anos Exp</span>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>20+</strong>
+                                        <span>Projetos</span>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>2+</strong>
+                                        <span>Clientes</span>
+                                    </div>
+                                </div>
+                                <div class="profile__expertise">
+                                    <span class="expertise-tag">FullCycle</span>
+                                    <span class="expertise-tag">DevOps</span>
+                                    <span class="expertise-tag">QA</span>
+                                    <span class="expertise-tag">Software Design</span>
+                                    <span class="expertise-tag">Sistem Architecture</span>
+                                </div>
+                                <span class="view-credentials-btn">Ver Credenciais Técnicas →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- POP-UP (MODAL) - O "Sobre Mim" Técnico Completo -->
+        <div id="profile-modal" class="modal">
+            <div class="modal__content">
+                <span class="modal__close">&times;</span>
+                
+                <div class="modal__header">
+                    <h2>Vitor Gabriel</h2>
+                    <span class="modal__subtitle">Tech Lead & Fundador</span>
+                </div>
+                
+                <div class="modal__body">
+                    <p class="modal__description">
+                        Desenvolvedor FullStack FullCycle especializado em Python, DevOps e arquitetura de software. Atuo liderando o desenvolvimento técnico de sistemas complexos, garantindo soluções escaláveis e eficientes desde o planejamento até a implementação em produção.
+                    </p>
+                    
+                    <div class="skills-modal-grid">
                         <div class="skill__category">
                             <h4>Frontend & Mobile</h4>
                             <div class="skill__tags">
@@ -142,40 +206,6 @@
                                 <span class="skill__tag">SCADA</span>
                                 <span class="skill__tag">WebSocket</span>
                                 <span class="skill__tag">REST API</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about__image">
-                    <div class="profile__card">
-                        <div class="profile__image">
-                            <img src="Assets/profile pic.jpeg" alt="Vitor Gabriel - Desenvolvedor FullStack" class="profile-photo">
-                        </div>
-                        <div class="profile__info">
-                            <h4>Vitor Gabriel</h4>
-                            <p>FullStack Developer</p>
-                            <div class="profile__stats">
-                                <div class="stat">
-                                    <strong>3+</strong>
-                                    <span>Anos Exp</span>
-                                </div>
-                                <div class="stat">
-                                    <strong>20+</strong>
-                                    <span>Projetos</span>
-                                </div>
-                                <div class="stat">
-                                    <strong>2+</strong>
-                                    <span>Clientes</span>
-                                </div>
-                            </div>
-                            <div class="profile__expertise">
-                                <span class="expertise-tag">FullCycle</span>
-                                <span class="expertise-tag">UX/UI</span>
-                                <span class="expertise-tag">DevOps</span>
-                                <span class="expertise-tag">QA</span>
-                                <span class="expertise-tag">Software Design</span>
-                                <span class="expertise-tag">Sistem Architecture</span>
                             </div>
                         </div>
                     </div>
@@ -574,7 +604,7 @@
                                 <div class="method__icon">📧</div>
                                 <div class="method__info">
                                     <span class="method__label">Email</span>
-                                    <a href="mailto:krosharesheniye@gmail.com" class="method__value">krosharesheniye@gmail.com</a>
+                                    <a href="mailto:vitor.zenkai@gmail.com" class="method__value">vitor.zenkai@gmail.com</a>
                                 </div>
                             </div>
                             
@@ -739,7 +769,7 @@
                         
                         <div class="footer__column">
                             <h4>Contato</h4>
-                            <a href="mailto:krosharesheniye@gmail.com">krosharesheniye@gmail.com</a>
+                            <a href="mailto:vitor.zenkai@gmail.com">vitor.zenkai@gmail.com</a>
                             <a href="https://wa.me/5544988110181" target="_blank">+55 (44) 98811-0181</a>
                             <span>Maringá - PR</span>
                         </div>
