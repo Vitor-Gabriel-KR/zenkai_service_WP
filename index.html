@@ -8,35 +8,33 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header class="header">
-        <nav class="nav container">
-            <div class="nav__brand">
-                <div class="logo">
-                    <img src="Assets/Logo Recortada.png" alt="Logo Vitor Gabriel">
+            <nav class="nav container">
+                <a href="#home" class="nav__brand">
+                    <div class="logo">
+                        <img src="Assets/Logo Recortada.png" alt="Zenkai Software Development">
+                    </div>
+                </a>
+                
+                <ul class="nav__menu">
+                    <li><a href="#home" class="nav__link">Home</a></li>
+                    <li><a href="#about" class="nav__link">Sobre</a></li>
+                    <li><a href="#services" class="nav__link">Serviços</a></li>
+                    <li><a href="#portfolio" class="nav__link">Portfólio</a></li>
+                    <li><a href="#contact" class="nav__link">Contato</a></li>
+                </ul>
+                
+                <div class="nav__action">
+                    <a href="#contact" class="btn__header-cta">Fale Conosco</a>
                 </div>
-                <div>
-                    <h2>Vitor Gabriel</h2>
-                    <span>Zenkai - 62.152.425/0001-73</span>
-                </div>
-            </div>
-            
-            <ul class="nav__menu">
-                <li><a href="#home" class="nav__link">Home</a></li>
-                <li><a href="#about" class="nav__link">Sobre</a></li>
-                <li><a href="#services" class="nav__link">Serviços</a></li>
-                <li><a href="#portfolio" class="nav__link">Portfólio</a></li>
-                <li><a href="#contact" class="nav__link">Contato</a></li>
-            </ul>
-            
-            <div class="nav__toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-
+                
+                <button class="nav__toggle" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
     <!-- Hero Section -->
     <section id="home" class="hero section">
         <div class="container">
@@ -743,8 +741,6 @@
                             <div class="logo">ZENKAI</div>
                         </div>
                         <div class="footer__info">
-                            <h3>Vitor Gabriel</h3>
-                            <p>Desenvolvedor FullStack FullCycle</p>
                             <span>62.152.425/0001-73</span>
                         </div>
                     </div>
@@ -789,7 +785,7 @@
                     </div>
                     
                     <div class="footer__copy">
-                        <p>&copy; 2024 Zenkai - Vitor Gabriel. Todos os direitos reservados.</p>
+                        <p>&copy; 2024 Zenkai. Todos os direitos reservados.</p>
                         <div class="footer__legal">
                             <a href="#privacy">Política de Privacidade</a>
                             <a href="#terms">Termos de Uso</a>

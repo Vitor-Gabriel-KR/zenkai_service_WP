@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. RESET, VARIÁVEIS E CONFIGURAÇÕES GERAIS
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +5,13 @@
 }
 
 :root { 
-    --primary: #12161A;        /* Fundo Principal (Dark Charcoal) */
-    --primary-dark: #090B0D;   /* Variação ainda mais escura para gradientes */
-    --secondary: #8A95A5;      /* Texto secundário e suporte (Cool Gray) */
-    --light: #E0E6ED;          /* Texto principal e títulos claros */
-    --accent: #F2994A;         /* Cor de Destaque / CTA (Solar Amber) */
-    --gray: #4A5568;           /* Elementos neutros de borda/divisores */
-    --dark: #12161A;           /* Fallback para elementos escuros */
+    --primary: #12161A;
+    --primary-dark: #090B0D;
+    --secondary: #8A95A5;
+    --light: #E0E6ED;
+    --accent: #F2994A;
+    --gray: #4A5568;
+    --dark: #12161A;
     --border-color: rgba(242, 153, 74, 0.15);
     --card-bg: #12161a;
 }
@@ -62,7 +59,6 @@ body {
     border-radius: 2px;
 }
 
-/* Botões Globais */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -104,131 +100,175 @@ body {
 }
 
 /* ==========================================================================
-   2. HEADER & NAVEGAÇÃO
+   2. HEADER & NAVEGAÇÃO (DESIGN CORPORATIVO PREMIUM)
    ========================================================================== */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(18, 22, 26, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(18, 22, 26, 0.75); /* Mais translúcido para valorizar o blur */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(9, 11, 13, 0.3);
-    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(242, 153, 74, 0.06); /* Linha sutil com a cor de destaque */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Quando o usuário rolar a página, o header encolhe elegantemente e ganha peso visual */
 .header.scrolled {
-    padding: 10px 0;
+    background: rgba(9, 11, 13, 0.92);
+    box-shadow: 0 10px 30px rgba(9, 11, 13, 0.5);
+    border-bottom: 1px solid rgba(242, 153, 74, 0.15);
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 24px 0; /* Espaçamento inicial mais imponente */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.header.scrolled .nav {
+    padding: 14px 0; /* Reduz o tamanho no scroll de forma suave */
+}
+
+/* Área da Logo Ampliada */
 .nav__brand {
     display: flex;
     align-items: center;
-    gap: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.nav__brand:hover {
+    transform: scale(1.02);
 }
 
 .nav__brand .logo {
-    height: 70px; 
+    height: 52px; /* Logo aumentada para excelente leitura técnica */
     width: auto; 
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
+}
+
+.header.scrolled .nav__brand .logo {
+    height: 44px; /* Reduz ligeiramente no scroll para manter o equilíbrio */
 }
 
 .nav__brand .logo img {
     height: 100%;
     width: auto;
     object-fit: contain;
+    /* Filtro leve para dar acabamento premium e brilho limpo à logo branca/laranja */
+    filter: drop-shadow(0 2px 8px rgba(242, 153, 74, 0.15));
 }
 
-.nav__brand h2 {
-    color: var(--accent);
-    font-size: 1.8rem;
-    margin-bottom: 2px;
-    line-height: 1.2;
-}
-
-.nav__brand span {
-    font-size: 0.9rem;
-    color: var(--secondary);
-    display: block;
-    line-height: 1.2;
-}
-
+/* Menu de Links */
 .nav__menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 36px;
     align-items: center;
 }
 
 .nav__link {
     text-decoration: none;
-    color: var(--light);
-    font-weight: 500;
-    transition: color 0.3s ease;
+    color: var(--secondary); /* Começa com tom neutro para não competir com a logo */
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
     position: relative;
-    padding: 8px 0;
+    padding: 6px 0;
 }
 
 .nav__link:hover {
-    color: var(--accent);
+    color: var(--light);
 }
 
+/* Indicador de link ativo/hover minimalista */
 .nav__link::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 2px;
     background: var(--accent);
-    transition: width 0.3s ease;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
 }
 
 .nav__link:hover::after {
     width: 100%;
 }
 
+/* Botão de Ação Direta do Header (CTA) */
+.nav__action {
+    display: flex;
+    align-items: center;
+}
+
+.btn__header-cta {
+    background: linear-gradient(135deg, rgba(242, 153, 74, 0.1) 0%, rgba(242, 153, 74, 0.02) 100%);
+    color: var(--accent);
+    border: 1px solid rgba(242, 153, 74, 0.4);
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn__header-cta:hover {
+    background: var(--accent);
+    color: var(--primary-dark);
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(242, 153, 74, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Menu Hamburguer Customizado */
 .nav__toggle {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    padding: 5px;
+    z-index: 1001;
 }
 
 .nav__toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--light);
-    margin: 3px 0;
-    transition: 0.3s;
-    border-radius: 2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--light);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
 }
-
 .nav__toggle:hover span {
     background: var(--accent);
 }
 
+/* Alinhamento do Botão de Ação */
 .cta-button {
     background: transparent;
     color: var(--accent);
     border: 2px solid var(--accent);
-    padding: 10px 20px;
+    padding: 8px 18px; /* Ajuste fino de respiro */
     border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-left: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .cta-button:hover {
@@ -237,10 +277,6 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(242, 153, 74, 0.3);
 }
-
-/* ==========================================================================
-   3. HERO SECTION
-   ========================================================================== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -290,9 +326,6 @@ body {
     background-size: cover;
 }
 
-/* ==========================================================================
-   4. ABOUT SECTION (SOBRE NÓS & POP-UP INTEGRADO)
-   ========================================================================== */
 .about__content {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -300,7 +333,6 @@ body {
     align-items: start;
 }
 
-/* Lado Esquerdo: Dados da Empresa */
 .about__info-company {
     display: flex;
     flex-direction: column;
@@ -317,7 +349,6 @@ body {
     color: var(--light);
 }
 
-/* Diretrizes e Destaques */
 .expertise__highlight {
     margin-top: 1rem;
 }
@@ -369,7 +400,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Lado Direito: Seção do Time / Card de Perfil Interativo */
 .about__team-section h3 {
     color: var(--light);
     font-size: 1.4rem;
@@ -493,7 +523,6 @@ body {
     color: var(--light);
 }
 
-/* ENGENHARIA VISUAL DO POP-UP (MODAL) */
 .modal {
     display: none;
     position: fixed;
@@ -576,7 +605,6 @@ body {
     font-size: 1rem;
 }
 
-/* Grid de Competências Internas do Modal */
 .skills-modal-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -614,9 +642,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   5. SERVICES SECTION
-   ========================================================================== */
 .services {
     background: #090B0D;
 }
@@ -711,7 +736,6 @@ body {
     color: var(--primary);
 }
 
-/* Metodologia */
 .work-process {
     margin-top: 5rem;
     padding-top: 3rem;
@@ -770,7 +794,6 @@ body {
     line-height: 1.6;
 }
 
-/* Diferenciais */
 .differentiators {
     margin-bottom: 5rem;
     padding: 3rem 0;
@@ -820,9 +843,6 @@ body {
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   6. PORTFOLIO SECTION
-   ========================================================================== */
 .portfolio {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     position: relative;
@@ -1215,9 +1235,23 @@ body {
     font-size: 1.1rem;
 }
 
-/* ==========================================================================
-   7. CONTACT SECTION
-   ========================================================================== */
+.project__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--secondary);
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 500;
+}
+
 .contact {
     background: linear-gradient(135deg, var(--primary-dark) 0%, #090B0D 100%);
     position: relative;
@@ -1550,9 +1584,6 @@ body {
     margin: 0;
 }
 
-/* ==========================================================================
-   8. FOOTER SECTION
-   ========================================================================== */
 .footer {
     background: #090B0D;
     color: var(--light);
@@ -1725,44 +1756,65 @@ body {
     color: var(--accent);
 }
 
-/* ==========================================================================
-   9. MEDIA QUERIES (RESPONSIVIDADE COMPLETA)
-   ========================================================================== */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .about__content {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 40px;
+    }
+    
+    .profile__card {
+        position: relative;
+        top: 0;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .portfolio__grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .contact__wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }
 
 @media (max-width: 768px) {
+    .nav {
+        padding: 18px 0;
+    }
+    
+    .nav__brand .logo {
+        height: 42px;
+    }
+
     .nav__menu {
         position: fixed;
-        top: 80px;
+        top: 0;
         left: -100%;
-        width: 100%;
-        background: rgba(18, 22, 26, 0.98);
+        width: 80%;
+        height: 100vh;
+        background: rgba(9, 11, 13, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
-        text-align: center;
-        padding: 20px 0;
-        box-shadow: 0 5px 10px rgba(9, 11, 13, 0.3);
-        transition: 0.3s;
-        backdrop-filter: blur(10px);
-        gap: 0;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px;
+        box-shadow: 20px 0 40px rgba(0, 0, 0, 0.7);
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .nav__menu.active {
         left: 0;
     }
 
-    .nav__menu li {
-        margin: 15px 0;
+    .nav__link {
+        font-size: 1.2rem;
     }
 
-    .nav__link {
-        padding: 12px 20px;
-        display: block;
-        font-size: 1.1rem;
+    .nav__action {
+        display: none;
     }
 
     .nav__toggle {
@@ -1770,43 +1822,28 @@ body {
     }
 
     .nav__toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: translateY(8px) rotate(45deg);
     }
-
     .nav__toggle.active span:nth-child(2) {
         opacity: 0;
+        transform: translateX(-10px);
     }
-
     .nav__toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-
-    .cta-button {
-        margin: 20px auto;
-        display: block;
-        width: 200px;
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .hero__title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
-
-    .hero__buttons {
-        flex-direction: column;
-    }
-
-    .profile__card {
-        max-width: 320px;
-        margin: 0 auto;
-        position: static;
-    }
-
+    
     .skills-modal-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .modal__content {
-        padding: 1.5rem;
+    .footer__content {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .contact__content,
